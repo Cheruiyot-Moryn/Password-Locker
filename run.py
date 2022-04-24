@@ -112,4 +112,16 @@ def main():
                           print("-"*30)
                           for user in display_user():
                               print(f"account: {user.accountname} \npassword: {user.accountpassword} \n\n")
-
+                          else: 
+                          print("Invalid Credentials")
+            else: 
+                      print("Try again")
+                      print("\n")
+        else:
+                  print("Incorrect try again")
+                  print("\n")
+    else:
+                  print("Choose a valid option")
+                  print("\n")
+if _NameArgsKwargs == '_main_':
+    main()
