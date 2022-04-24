@@ -17,3 +17,9 @@ class User:
         self.lastname=lastname
         self.account_name=account_name
         self.password=password
+
+    def save_account(self):
+        '''
+        Function to create  and save new accounts n user data list
+        '''
+        User.users_list.append(self)
