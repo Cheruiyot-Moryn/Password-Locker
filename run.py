@@ -1,6 +1,5 @@
 from ast import If
 import string,random,time
-from unittest.mock import _NameArgsKwargs
 from httplib2 import Credentials
 import pyperclip
 from credential import Credential
@@ -124,6 +123,6 @@ def main():
     else:
                   print("Choose a valid option")
                   print("\n")
-if _NameArgsKwargs == '_main_':
+if __name__ == '_main_':
     main()
 
