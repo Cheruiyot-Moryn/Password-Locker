@@ -16,3 +16,9 @@ def save_credential(credential):
     Function that saves user credentials
     '''
     credential.save_credential()
+
+def authenticate(name,password):
+    '''
+    Function that authenticates for signing in
+    '''
+    return Credential.authenticate_credential(name,password)
