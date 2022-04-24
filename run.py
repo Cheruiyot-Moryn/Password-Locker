@@ -11,6 +11,7 @@ def create_credential(identity, user_name, password):
     new_cred = Credential(identity, user_name,password)
     return new_cred
 
+
 def save_credential(credential):
     '''
     Function that saves user credentials
@@ -84,7 +85,7 @@ def main():
               loginUsername=input()
               print(" your password..")
               loginpassword=input()
-              if find_user(loginPassword):
+              if user():
                   print("\n")
                   print("you can create multiple accounts or also view them")
                   print(","*80)
@@ -103,21 +104,21 @@ def main():
                           accountpassword=input()
                       else:
                           print("please put in a valid choice")
-                          save_account(create_account(user,username,accountpassword))
+                          save_account(user,username,accountpassword)
                           print("\n")
                           print(f"Username:{username} \nAccountname;{username} \npassword:{accountpassword}")
-        elif choose == "VC":
-                      if find_user(username):
+                  elif choose == "VC":
+                      if (username):
                           print("Here is a list of your created accounts: ")
                           print("-"*30)
-                          for user in display_user():
+                          for user in user():
                               print(f"account: {user.accountname} \npassword: {user.accountpassword} \n\n")
-                          else: 
+                      else: 
                           print("Invalid Credentials")
-            else: 
+                  else: 
                       print("Try again")
                       print("\n")
-        else:
+              else:
                   print("Incorrect try again")
                   print("\n")
     else:
@@ -125,3 +126,4 @@ def main():
                   print("\n")
 if _NameArgsKwargs == '_main_':
     main()
+
