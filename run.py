@@ -54,3 +54,27 @@ def account_exist(name):
 
 def copy_password(number,count):
     User.copy_password(number,count)
+
+def main():
+    while True:
+        print("Welcome to password locker write LG or SU to start")
+        print("LG -or- SU")
+        option=input()
+        if option == "SU":
+              print ("Create Account")
+              print("-"*10)
+              
+              print("Enter your first name ...")
+              firstname=input()
+              print("Enter your last name ...")
+              lastname=input()
+              print("Enter your username ...")
+              username=input()
+              print("Enter your password ...")
+              userpassword=input()
+              save_credential(create_credential(firstname,lastname,userpassword))
+              print("Your account was created successfully. Here are the details")
+              print("-"*10)
+              print(f"Name: {firstname} {lastname} \nUsername: {username} \nPassword: {userpassword}")
+              print ("\nUse Login to your account with your details")
+              print("\n \n")
