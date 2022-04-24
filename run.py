@@ -106,3 +106,10 @@ def main():
                           save_account(create_account(user,username,accountpassword))
                           print("\n")
                           print(f"Username:{username} \nAccountname;{username} \npassword:{accountpassword}")
+        elif choose == "VC":
+                      if find_user(username):
+                          print("Here is a list of your created accounts: ")
+                          print("-"*30)
+                          for user in display_user():
+                              print(f"account: {user.accountname} \npassword: {user.accountpassword} \n\n")
+
