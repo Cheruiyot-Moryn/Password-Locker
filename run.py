@@ -78,3 +78,31 @@ def main():
               print(f"Name: {firstname} {lastname} \nUsername: {username} \nPassword: {userpassword}")
               print ("\nUse Login to your account with your details")
               print("\n \n")
+
+        elif option =="LG":
+              print(" your username..")
+              loginUsername=input()
+              print(" your password..")
+              loginpassword=input()
+              if find_user(loginPassword):
+                  print("\n")
+                  print("you can create multiple accounts or also view them")
+                  print(","*80)
+                  print("AC -or- VC")
+                  choose= input()
+                  print("\n")
+                  if choose == "AC":
+                      print("Generate password or create new password?")
+                      decision=input()
+                      if decision=="G":
+                          characters=string.ascii_letters + string.digits
+                          accountpassword="".join(random.choices(characters)for x in range(random.randint(6,16)))
+                          print(f"Password:{accountpassword}")
+                      elif decision=="C":
+                          print("Enter password")
+                          accountpassword=input()
+                      else:
+                          print("please put in a valid choice")
+                          save_account(create_account(user,username,accountpassword))
+                          print("\n")
+                          print(f"Username:{username} \nAccountname;{username} \npassword:{accountpassword}")
